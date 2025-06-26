@@ -12,7 +12,7 @@ Agostina Juarez
 
 Áreas de trabajo:
 Creación del API: Malena Castillo, Susan Huang
-Programación
+Programación: Montserrat Collao
 
 Tecnologías implementadas:
 MockAPI
