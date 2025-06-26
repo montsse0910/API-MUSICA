@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style (taylor_s version).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>MyRhythm</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Área izquierda con searchbar y sidebar -->
+        <div class="left-area">
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Buscar artista...">
+                <button onclick="buscarArtistas(document.getElementById('search-bar').value)" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Explorar</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> Guardado</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> Playlists</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Recientes</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Área derecha con header y contenido -->
+        <div class="right-area">
+            <header>
+                <h1>MyRhythm</h1>
+                <nav>
+                    <a href="#">Premium</a>
+                    <a href="#">Ayuda</a>
+                    <a href="#">Descargar</a>
+                    <a href="#">Perfil</a>
+                </nav>
+            </header>
+
+            <div class="main-content">
+                <h2 class="section-title">Recomendados para ti</h2>
+                <div class="album-grid">
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/84/81/35/848135db93009a285af169c7c3951f03.jpg" alt="Álbum">
+                        <h3>Midnight Memories</h3>
+                        <p>One Direction</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/86/85/7b/86857b128d088a652aa2804994e8ddb0.jpg" alt="Álbum">
+                        <h3>Midnights (The Til Dawn Edition)</h3>
+                        <p>Taylor Swift</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/bd/0f/e5/bd0fe5996aff441f143fe23a295ea886.jpg" alt="Álbum">
+                        <h3>Positions</h3>
+                        <p>Ariana Grande</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/74/bf/10/74bf10cd5e1ec4f14758d6f5fca29c21.jpg" alt="Álbum">
+                        <h3>Short n' Sweet</h3>
+                        <p>Sabrina Carpenter</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/e7/9f/e6/e79fe6d47d8c51af0d8059bd1a82dfa5.jpg" alt="Álbum">
+                        <h3>GUTS (spilled)</h3>
+                        <p>Olivia Rodrigo</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://i.pinimg.com/736x/f0/ca/9b/f0ca9bdddfac6f6c29ef2fa49f6eef39.jpg" alt="Álbum">
+                        <h3>Did you know that there's a tunnel under ocean blvd</h3>
+                        <p>Lana del Rey</p>
+                    </div>
+                    <div class="album">
+                      <img src="https://i.pinimg.com/736x/5a/8c/c7/5a8cc7f685fd69c1fbef5dd8bd7ab4c7.jpg" alt="Álbum">
+                      <h3>The Album</h3>
+                      <p>BLACKPINK</p>
+                  </div>
+                  <div class="album">
+                      <img src="https://cdn-images.dzcdn.net/images/cover/8ee0b59b0c7306ba311f4bae6e035869/0x1900-000000-80-0-0.jpg" alt="Álbum">
+                      <h3>KUSTONE</h3>
+                      <p>Lit Killah</p>
+                  </div>
+                  <div class="album">
+                      <img src="https://www.clarin.com/2013/09/24/BybNpl93Qg_720x0.jpg" alt="Álbum">
+                      <h3>AM</h3>
+                      <p>Arctic Monkeys</p>
+                  </div>
+                  <div class="album">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Dua_Lipa_-_Training_Season.png" alt="Álbum">
+                      <h3>training season</h3>
+                      <p>Dua Lipa</p>
+                  </div>
+                  <div class="album">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGpAX_ojGfcpfWXkbOXbUIu_a3pY71JXxxw&s" alt="Álbum">
+                      <h3>evermore</h3>
+                      <p>Taylor Swift</p>
+                  </div>
+                  <div class="album">
+                      <img src="https://umusicstore.com.ar/cdn/shop/files/D_NQ_NP_689894-MLA32091768152_092019-O.jpg?v=1684181989" alt="Álbum">
+                      <h3>Dangerous Woman</h3>
+                      <p>Ariana Grande</p>
+                  </div>
+                </div>
+
+                <h2 class="section-title" id="search-results-title" style="display:none;">Resultados de Búsqueda</h2>
+                    <div id="resultados" class="album-grid">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+                    </div>
+</div>
+            </div>
+            <footer>
+                <p>© 2023 MusicApp</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

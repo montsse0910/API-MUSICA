@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    display: flex; /* Usar flexbox para el body */
+    flex-direction: column; /* Colocar elementos en columna */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Layout principal */
+.app-container {
+    display: flex;
+    flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+}
+
+/* Área izquierda (search + sidebar) */
+.left-area {
+    width: 250px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    padding: 1rem;
+    background-color: #121212;
+    border-bottom: 1px solid #282828;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #282828;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem; /* Ajustar tamaño para que coincida con el pseudo-elemento */
+    color: #b3b3b3;
+    position: absolute; /* Posicionar absolutamente dentro de .search-bar */
+    left: 1rem; /* Misma posición que el pseudo-elemento */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0; /* Eliminar padding extra si lo tiene */
+    transition: color 0.3s ease; /* Transición para el hover */
+}
+
+.search-button:hover {
+    color: #fff; /* Color al pasar el ratón */
+    transform: translateY(-50%) scale(1.1); /* Pequeño efecto de escala */
+}
+
+/* Sidebar */
+.sidebar {
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 0.5rem 0;
+}
+
+.sidebar ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #282828;
+    color: #fff;
+}
+
+.sidebar ul li a i {
+    margin-right: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Área derecha (contenido principal) */
+.right-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #a76f97;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Asegúrate de que el contenido principal esté en columna */
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Grid de álbumes */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.album {
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.album:hover {
+    background-color: #282828;
+    transform: translateY(-5px);
+}
+
+.album img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album p {
+    color: #b3b3b3;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+background-color: #181818;
+color: #b3b3b3;
+padding: 1rem;
+text-align: center;
+font-size: 0.8rem;
+border-top: 1px solid #282828;
+position: fixed;
+width: 100%;
+bottom: 0%;
+}
